@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Myat Cho Mon Oo | Principal Big Data Architect | Senior AI Lead</title>
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-navy: #002347;
+            --accent-blue: #006ce0;
+            --success-green: #28a745;
+            --text-main: #1a202c;
+            --bg-gray: #f7fafc;
+            --border: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            margin: 0;
+            background: #fff;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        .hr-status-bar {
+            background: #fff9e6;
+            color: #856404;
+            padding: 14px 0;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-align: center;
+            border-bottom: 2px solid #ffeeba;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .hr-status-bar i {
+            margin-right: 8px;
+            color: var(--success-green);
+        }
+
+        .compass-tag {
+            background: var(--primary-navy);
+            color: #fff;
+            padding: 3px 10px;
+            border-radius: 4px;
+            margin-left: 10px;
+            font-size: 0.8rem;
+        }
+
+        header {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #ffffff 40%, var(--bg-gray) 100%);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+        .hero-text {
+            flex: 2;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            margin: 0;
+            color: var(--primary-navy);
+            letter-spacing: -1.5px;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: 1.6rem;
+            color: var(--accent-blue);
+            font-weight: 500;
+            margin: 15px 0 25px 0;
+        }
+
+        .profile-img-container {
+            flex: 1;
+            text-align: right;
+        }
+
+        .profile-img {
+            width: 300px;
+            height: 300px;
+            border-radius: 20px;
+            object-fit: cover;
+            border: 10px solid white;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+        }
+
+        .hero-summary {
+            font-size: 1.25rem;
+            color: #4a5568;
+            border-left: 6px solid var(--accent-blue);
+            padding-left: 25px;
+            margin: 30px 0;
+            max-width: 800px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 35px;
+        }
+
+        .btn {
+            padding: 18px 35px;
+            border-radius: 8px;
+            font-weight: 800;
+            font-size: 1.05rem;
+            text-decoration: none;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--accent-blue);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-navy);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-outline {
+            background: white;
+            color: var(--primary-navy);
+            border: 2px solid var(--primary-navy);
+        }
+
+        .btn-outline:hover {
+            background: #f0f7ff;
+            transform: translateY(-3px);
+        }
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--primary-navy);
+            margin-bottom: 50px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-title::after {
+            content: "";
+            height: 3px;
+            flex: 1;
+            background: var(--border);
+            opacity: 0.5;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            border-color: var(--accent-blue);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+        }
+
+        .card i {
+            font-size: 2.2rem;
+            color: var(--accent-blue);
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            color: var(--primary-navy);
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+
+        .card ul {
+            padding: 0;
+            list-style: none;
+            font-size: 1rem;
+            color: #4a5568;
+        }
+
+        .card li {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .card li::before {
+            content: "•";
+            color: var(--accent-blue);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .experience-item {
+            margin-bottom: 60px;
+            padding-left: 35px;
+            border-left: 3px solid #e2e8f0;
+            position: relative;
+        }
+
+        .experience-item::before {
+            content: "";
+            width: 16px;
+            height: 16px;
+            background: var(--accent-blue);
+            position: absolute;
+            left: -10px;
+            top: 8px;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 4px #ebf8ff;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .exp-role {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            margin: 0;
+        }
+
+        .exp-meta {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--accent-blue);
+            margin-top: 5px;
+        }
+
+        .exp-date {
+            background: #f1f5f9;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #475569;
+        }
+
+        .exp-impact {
+            background: #f0fff4;
+            color: #22543d;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        .pub-row {
+            background: #fff;
+            border: 1px solid var(--border);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .pub-title {
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--primary-navy);
+            max-width: 80%;
+        }
+
+        .citation-badge {
+            background: var(--primary-navy);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 800;
+            font-size: 0.85rem;
+        }
+
+        footer {
+            background: var(--primary-navy);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .footer-action {
+            font-size: 2.22rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .btn-white {
+            background: #fff;
+            color: var(--primary-navy);
+        }
+
+        @media (max-width: 900px) {
+            .hero-flex {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .profile-img-container {
+                text-align: center;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-summary {
+                text-align: left;
+            }
+
+            .exp-header {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hr-status-bar">
+        <div class="container">
+            <i class="fas fa-check-circle"></i> WORK AUTHORIZATION: EP ELIGIBLE (70+ COMPASS SCORE) | RELOCATING TO
+            SINGAPORE | <span class="compass-tag">Virtual Technical Interview Ready</span>
+        </div>
+    </div>
+
+    <header>
+        <div class="container hero-flex">
+            <div class="hero-text">
+                <h1 class="hero-title">Dr. Myat Cho Mon Oo (Ph.D.)</h1>
+                <h2 class="hero-subtitle">Principal Big Data Architect | Senior AI Research Lead</h2>
+
+                <div class="hero-summary">
+                    Highly accomplished <strong>Senior AI Research Lead</strong> and <strong>Ph.D.</strong> holder with
+                    <strong>12+ years of experience</strong> specializing in the transition of deep research (Low-TRL)
+                    into scalable industrial systems (High-TRL).
+                    Expert in <strong>distributed big data (Spark/Hadoop)</strong> and <strong>SOTA Generative
+                        AI</strong>, with a proven track record of increasing data accuracy by <strong>22%</strong>.
+                    <br><br>
+                    <i class="fas fa-certificate" style="color:var(--success-green);"></i> <strong>Verified COMPASS
+                        Score: 70+ Points</strong> (Fully eligible for immediate Singapore EP sponsorship and
+                    relocation).
+                </div>
+
+                <div class="contact-row">
+                    <span style="margin-right: 20px;"><i class="fas fa-envelope" style="color:var(--accent-blue);"></i>
+                        <a href="mailto:chomon9490@gmail.com"
+                            style="text-decoration:none; color:inherit; font-weight:600;">chomon9490@gmail.com</a></span>
+                    <span><i class="fab fa-whatsapp" style="color:var(--accent-blue);"></i> <a
+                            href="https://wa.me/959650101515"
+                            style="text-decoration:none; color:inherit; font-weight:600;">+95 9 650 10 1515</a></span>
+                </div>
+
+                <div class="btn-group">
+                    <a href="mailto:chomon9490@gmail.com?subject=Technical Interview Invitation - Dr. Myat Cho Mon Oo&body=Dear Dr. Myat, we viewed your portfolio and would like to schedule a technical interview regarding a Principal Big Data / AI position..."
+                        class="btn btn-primary">
+                        <i class="fas fa-calendar-check"></i> INVITE TO INTERVIEW
+                    </a>
+                    <!-- CHANGED TO BIG DATA CV LINK -->
+                    <a href="CV_Dr_Myat_Cho_Mon_Oo_Principal_Big_Data.docx" download class="btn btn-outline">
+                        <i class="fas fa-download"></i> DOWNLOAD PRINCIPAL CV (.DOCX)
+                    </a>
+                </div>
+            </div>
+
+            <div class="profile-img-container">
+                <img src="profile.png" alt="Dr. Myat Cho Mon Oo" class="profile-img"
+                    onerror="this.src='https://via.placeholder.com/300x300/002347/FFFFFF?text=Dr.+Myat'">
+            </div>
+        </div>
+    </header>
+
+    <section class="container">
+        <h2 class="section-title">Big Data & Infrastructure Core</h2>
+        <div class="grid-3">
+            <div class="card">
+                <i class="fas fa-server"></i>
+                <h3>Distributed Architecture</h3>
+                <ul>
+                    <li>Spark / Hadoop / Hive Pipeline Design</li>
+                    <li>Distributed Training Protocols</li>
+                    <li>End-to-end Big Data Architectures</li>
+                    <li>SaaS Scalability Engineering</li>
+                </ul>
+            </div>
+            <div class="card">
+                <i class="fas fa-microchip"></i>
+                <h3>At-Scale Model Scaling</h3>
+                <ul>
+                    <li>Random Forest Scaling for Spark</li>
+                    <li>Hyperparameter Optimization for HDFS</li>
+                    <li>SOTA Methodology Integration (GenAI)</li>
+                    <li>Instruction Finetuning (LLM/VLM)</li>
+                </ul>
+            </div>
+            <div class="card">
+                <i class="fas fa-project-diagram"></i>
+                <h3>Big Data Strategy</h3>
+                <ul>
+                    <li>Data Governance & Analytics Strategy</li>
+                    <li>Directed Research Lab (10+ Scientists)</li>
+                    <li>Mentored 100+ Professional Peers</li>
+                    <li>Cost-Efficiency in Large-Scale Infrastructure</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: var(--bg-gray);">
+        <div class="container">
+            <h2 class="section-title">Selective Professional History</h2>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div>
+                        <h3 class="exp-role">Senior Data & AI Lead</h3>
+                        <div class="exp-meta">IMCS Co Ltd.</div>
+                    </div>
+                    <span class="exp-date">2024 – PRESENT</span>
+                </div>
+                <ul>
+                    <li>Successfully transitioned complex analytical research modules into high-TRL production data
+                        systems (SaaS).</li>
+                    <li>Curated large-scale unstructured datasets and implemented automated validation pipelines,
+                        improving data accuracy by 22%.</li>
+                    <li>Developed anomaly detection models for corporate AI-driven strategic planning for APAC
+                        leadership.</li>
+                </ul>
+                <div class="exp-impact">KPI: +22% Data Accuracy Increase via Infrastructure Optimization</div>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div>
+                        <h3 class="exp-role">Principal Researcher / Team Lead</h3>
+                        <div class="exp-meta">University of Computer Studies, Yangon (UCSY)</div>
+                    </div>
+                    <span class="exp-date">2014 – 2024</span>
+                </div>
+                <ul>
+                    <li>Directed high-performance lab overseeing end-to-end development of algorithms for
+                        high-dimensional datasets.</li>
+                    <li>Spearheaded international-level research into scalable Random Forest models for Big Data using
+                        <strong>Spark frameworks</strong>.</li>
+                    <li>Mentored 100+ professionals in distributed analytics and ML best practices.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 class="section-title">Tier-1 Credentials & Impact</h2>
+        <div class="grid-3" style="margin-bottom: 50px;">
+            <div class="card" style="border-top: 6px solid var(--primary-navy); padding: 30px;">
+                <h4 style="margin:0;">Ph.D. in Information Technology</h4>
+                <p style="font-weight: 700;">UCSY | 2021</p>
+                <p style="font-size:0.9rem;">Specialized in Scaling Distributed Optimization Algorithms.</p>
+            </div>
+            <div class="card" style="border-top: 6px solid var(--primary-navy); padding: 30px;">
+                <h4 style="margin:0;">Master of Computer Science</h4>
+                <p style="font-weight: 700;">UCSY | 2013</p>
+                <p style="font-size:0.9rem;">Awarded with <strong>Distinction</strong>.</p>
+            </div>
+        </div>
+
+        <div class="pub-row">
+            <span class="pub-title">An efficient predictive analytics system for high dimensional big data (KSJU)</span>
+            <span class="citation-badge">56 CITATIONS</span>
+        </div>
+        <div class="pub-row">
+            <span class="pub-title">Scaling of Random Forest for Big Data Analysis using Spark (IEEE)</span>
+            <span class="citation-badge">10 CITATIONS</span>
+        </div>
+
+        <p style="text-align: center; margin-top: 30px;">
+            <a href="https://scholar.google.com/citations?user=USnYpr0AAAAJ" target="_blank"
+                style="color:var(--accent-blue); font-weight: 700; text-decoration: none;">View Research Profile &
+                Citations <i class="fas fa-link"></i></a>
+        </p>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-action">Ready for Principal Leadership in Singapore</div>
+            <p style="max-width: 650px; margin: 0 auto 50px auto; opacity: 0.8; font-size: 1.15rem;">
+                Currently seeking Principal Big Data or Senior AI roles in Singapore. Ph.D. holder with 70+ COMPASS
+                points eligible for immediate Employment Pass sponsorship.
+            </p>
+
+            <div class="btn-group" style="justify-content: center;">
+                <a href="mailto:chomon9490@gmail.com" class="btn btn-white">EMAIL ME DIRECTLY</a>
+                <a href="CV_Dr_Myat_Cho_Mon_Oo_Principal_Big_Data.docx" download class="btn btn-primary"
+                    style="background:#fff; color:var(--accent-blue);">DOWNLOAD CV (.DOCX)</a>
+            </div>
+
+            <p style="margin-top: 80px; font-size: 0.85rem; opacity: 0.5;">&copy; 2026 Dr. Myat Cho Mon Oo. Built to
+                Singapore Recruitment Standards.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
